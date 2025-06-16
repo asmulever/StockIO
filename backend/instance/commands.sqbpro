@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2614"/><column_width id="4" width="0"/></tab_structure><tab_browse><table title="." custom_title="0" dock_id="3" table="0,0:"/><dock_state state="000000ff00000000fd000000010000000200000248000001cdfc0100000002fc00000000000002480000000000fffffffa000000000100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000002480000011e00ffffff000002480000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">INSERT INTO inventory_movement
+(movement_id, date, product_id, movement_type, quantity, order_id, notes)
+VALUES
+('M001', '2024‑05‑20 09:00:00', '6f1d53d0-1111-4d30-b1e6-111111111001', 'INBOUND', 10, 'PO‑1001', 'Supplier reception'),
+('M002', '2024‑05‑20 10:30:00', '6f1d53d0-1111-4d30-b1e6-111111111002', 'INBOUND', 20, 'PO‑1002', 'Supplier reception'),
+('M003', '2024‑05‑20 14:15:00', '6f1d53d0-1111-4d30-b1e6-111111111001', 'OUTBOUND', 1,  'SO‑2001', 'Sale to John Doe'),
+('M004', '2024‑05‑20 16:00:00', '6f1d53d0-1111-4d30-b1e6-111111111005', 'INBOUND',  5, 'PO‑1003', 'New purchase'),
+('M005', '2024‑05‑20 17:00:00', '6f1d53d0-1111-4d30-b1e6-111111111002', 'INBOUND', 10, 'PO‑1004', 'Urgent reception'),
+('M006', '2024‑05‑21 11:45:00', '6f1d53d0-1111-4d30-b1e6-111111111001', 'OUTBOUND', 20, 'SO‑2002', 'Sale to Jane Doe'),
+('M007', '2024‑05‑21 13:00:00', '6f1d53d0-1111-4d30-b1e6-111111111003', 'OUTBOUND', 1,  'SO‑2003', 'Customer exchange'),
+('M008', '2024‑05‑21 15:30:00', '6f1d53d0-1111-4d30-b1e6-111111111001', 'ADJUSTMENT_OUT', 1, 'ADJ‑001', 'Warehouse damage');
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

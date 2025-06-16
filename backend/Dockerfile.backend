@@ -1,0 +1,18 @@
+# Imagen base
+FROM python:3.10-slim
+
+# Crear directorio de trabajo
+WORKDIR /app
+
+# Copiar archivos
+COPY ./app /app/app
+COPY requirements.txt /app/
+
+# Instalar dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Puerto expuesto
+EXPOSE 5000
+
+# Comando por defecto
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=5000"]

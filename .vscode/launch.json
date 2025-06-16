@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "cwd": "${workspaceFolder}/backend",      // 👈  mueve el CWD al back
+      "env": {
+        // si tu wsgi.py está en backend/wsgi.py:
+        "FLASK_APP": "wsgi.py",                // archivo relativo a cwd
+        // …o usa módulo: "FLASK_APP": "backend.wsgi"
+        "FLASK_ENV": "development"
+      },
+      "args": ["run", "--port", "5000", "--debug"],
+      "jinja": true
+    },
+    {
+      "name": "Backend (Flask)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/wsgi.py",
+      "console": "integratedTerminal",
+      "env": {
+        "FLASK_APP": "wsgi.py",
+        "FLASK_ENV": "development"
+      },
+      "args": ["run", "--port=5000", "--debug"],
+      "jinja": true
+    },
+    {
+      "name": "Frontend (React + Vite)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/frontend",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Backend + Frontend",
+      "configurations": ["Backend (Flask)", "Frontend (React + Vite)"]
+    },
+     {
+      "name": "Launch Flask + Frontend",
+      "configurations": ["Python: Flask", "Frontend (React + Vite)"]
+    }
+  ]
+}
